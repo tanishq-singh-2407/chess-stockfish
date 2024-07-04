@@ -1,19 +1,19 @@
-from bottle import Bottle, request, response
+from bottle import run, app, request, response, route
 import chess
 import chess.engine
 from bottle_cors_plugin import cors_plugin
 import os
 
-app = Bottle()
+app = app()
 app.install(cors_plugin('*'))
 
 STOCKFISH_PATH = os.path.join(os.getcwd(), "stockfish", "16_x64_binary")
 
-@app.route('/')
+@route('/')
 def hello():
     return {"message": "Hi"}
 
-@app.route('/gen_move', method='POST')
+@route('/gen_move', method='POST')
 def gen_move():
     data = request.json
     
@@ -35,4 +35,4 @@ def gen_move():
 
 if __name__ == '__main__':
     print('Hi')
-    app.run(host='0.0.0.0', port=8000)
+    run(host='0.0.0.0', port=8000)
