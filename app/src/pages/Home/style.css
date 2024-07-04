@@ -1,0 +1,26 @@
+.person {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.person span {
+    position: absolute;
+    font-weight: 600;
+    color: grey;
+    text-decoration: underline;
+}
+
+.person span i {
+    text-decoration: none;
+}
+
+.person div {
+    width: 100%;
+    padding-right: 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
