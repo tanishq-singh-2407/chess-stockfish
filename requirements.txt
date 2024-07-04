@@ -1,2 +1,3 @@
 bottle==0.12.25
 chess==1.10.0
+bottle-cors-plugin==0.1.9
